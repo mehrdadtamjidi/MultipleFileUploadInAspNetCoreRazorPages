@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>File Upload</h1>
+<hr />
+<form method="post" enctype="multipart/form-data">
+    Files <input type="file" name="files" multiple="multiple" /> 
+    <button type="submit">Upload File</button>
+</form>
+ 
+@if(ViewBag.Message != null)
+{
+    <div class="alert" style="margin-top:20px">
+      <span class="badge badge-success"> @ViewData["Message"]</span>  
+    </div>
+}
